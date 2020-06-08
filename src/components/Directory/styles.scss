@@ -1,0 +1,49 @@
+.directory {
+    position: relative;
+    height: 100vh;
+
+    .wrap {
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+        } 
+
+        .item {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0; left: 0;
+                background: rgba(0,0,0,0.3);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            a {
+                position: absolute;
+                top: 50%; 
+                left: 50%;
+                padding: .8rem 1rem;
+                -webkit-transform:  translate(-50%);
+                -moz-transform: translate(-50%);
+                transform: translate(-50%);
+                font-size: 2rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                background-color: #fff;
+                border: 1px solid #000;
+                z-index: 2; 
+            }
+        }
+    }
+}

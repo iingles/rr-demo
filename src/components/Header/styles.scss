@@ -1,0 +1,20 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    height: 6.5rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    z-index: 1000;
+    .wrap {
+        height: 100%;
+
+        .logo {
+            height: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+}

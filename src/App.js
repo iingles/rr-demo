@@ -6,11 +6,19 @@ import React from "react";
 //   Link
 // } from "react-router-dom";
 
+import Header from './components/Header/index';
+import Homepage from './pages/Homepage/index';
+
+import './default.scss';
+
 export default function App() {
 
   return (
     <div className="App">
-      <h2>Hello World!</h2>
-   </div>
-  )
-}
+      <Header />
+      <main>
+        <Homepage />
+      </main>
+    </div>
+  );
+};
