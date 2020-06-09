@@ -7,13 +7,23 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
     z-index: 1000;
     .wrap {
+        display: flex;
         height: 100%;
+        justify-content: space-between;
 
         .logo {
             height: 100%;
 
             img {
                 height: 100%;
+            }
+        }
+
+        .callToActions {
+            align-self: center;
+            a {
+                color: #000;
+                text-transform: uppercase;
             }
         }
     }

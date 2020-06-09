@@ -1,13 +1,12 @@
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 
-import Header from './components/Header/index';
+// Layouts
+
+import MainLayout from './layouts/MainLayout'
+
 import Homepage from './pages/Homepage/index';
+import Registration from './pages/Registration/index';
 
 import './default.scss';
 
@@ -15,10 +14,26 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header />
-      <main>
-        <Homepage />
-      </main>
+      {/* Switch matches the first path that matches */}
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <MainLayout>
+                <Homepage />
+            </MainLayout>
+          )}
+        />
+        <Route
+          path="/registration"
+          render={() => (
+            <MainLayout>
+              <Registration />
+            </MainLayout>
+          )}
+        />
+      </Switch>
     </div>
   );
 };
