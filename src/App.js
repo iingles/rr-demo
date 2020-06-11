@@ -35,8 +35,10 @@ class App extends Component {
         const userRef = await handleUserProfile(userAuth);
         userRef.onSnapshot(snapshot => {
           this.setState({
-            id: snapshot.id,
-            ...snapshot.data()
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
           })
         })
       }
@@ -59,7 +61,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        
+
         { /* Switch matches the first path that matches */ }
         <Switch>
           <Route

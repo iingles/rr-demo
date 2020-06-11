@@ -22,7 +22,7 @@ const Header = props => {
                 </div>
 
                 <div className="callToActions">
-
+                    
                     { currentUser && (
                         <button onClick={()=>auth.signOut()}>Logout</button>
                     )}
