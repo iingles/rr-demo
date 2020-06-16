@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 import Button from '../Forms/Button';
-import FormInput from '../Forms/FormImput';
+import FormInput from '../Forms/FormInput';
+
 
 
 import { signInWithGoogle, auth } from '../../firebase/utils';
@@ -91,6 +93,9 @@ class Signin extends Component {
                                         Sign in with Google
                                     </Button>
                                 </div>
+                            </div>
+                            <div className="links">
+                                <Link to="/recovery">Forgot password?</Link>
                             </div>
                         </form>
                     </div>

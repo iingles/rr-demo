@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { auth, handleUserProfile } from './firebase/utils'
+import { auth, handleUserProfile } from './firebase/utils';
 
 // Layouts
 
-import MainLayout from './layouts/MainLayout'
+import MainLayout from './layouts/MainLayout';
 
 import Homepage from './pages/Homepage/index';
 import Registration from './pages/Registration/index';
 import Login from './pages/Login';
+import Recovery from './pages/Recovery';
 
 import './default.scss';
 
@@ -87,6 +88,14 @@ class App extends Component {
             render={() => currentUser ? <Redirect to="/" /> : (
               <MainLayout currentUser={currentUser}>
                 <Login />
+              </MainLayout>
+            )}
+          />
+          <Route
+            path="/recovery"
+            render={ () => (
+              <MainLayout>
+                <Recovery />
               </MainLayout>
             )}
           />

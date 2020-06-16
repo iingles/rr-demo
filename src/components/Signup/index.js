@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { auth, handleUserProfile } from '../../firebase/utils'
 
-import FormInput from '../Forms/FormImput';
+import FormInput from '../Forms/FormInput';
 import Button from '../Forms/Button';
 
 import './styles.scss';
